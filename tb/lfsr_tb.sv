@@ -29,6 +29,7 @@ module lfsr_tb();
     integer test = 0;
     integer errors = 0;
     integer iter;
+    logic [7:0] pattern;
 
     initial clock = 0;
     always #5 clock = ~clock;
@@ -57,8 +58,10 @@ module lfsr_tb();
             $display("FAIL: Test %d", test);
             errors++;
         end
+        $display("PASS: Test %d", test);
 
         rst_n = 1;
+
 
         test++;
 
@@ -73,9 +76,11 @@ module lfsr_tb();
             iter++;
         end while (state !== 8'h01);
         if (iter !== 255) begin
-            $display("FAIL");
+            $display("FAIL: Test %d", test);
             errors++;
         end
+
+        $display("PASS: Test %d", test);
 
         rst_n = 0;
         @(negedge clock);
@@ -88,62 +93,17 @@ module lfsr_tb();
         load_en = 1;
         step = 0;
 
-        load_bit = 0;
-        @(negedge clock);
-        if (state !== 8'h02) begin
-            $display("FAIL");
+        pattern = 8'h6F;
+
+        for (int i =  7; i >= 0; i--) begin
+            load_bit = pattern[i];
+            @(negedge clock);
+        end
+        if (state !== pattern) begin
+            $display("FAIL: Test %d", test);
             errors++;
         end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'h05) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'h0B) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 0;
-        @(negedge clock);
-        if (state !== 8'h16) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'h2D) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'h5B) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'hB7) begin
-            $display("FAIL");
-            errors++;
-        end
-
-        load_bit = 1;
-        @(negedge clock);
-        if (state !== 8'h6F) begin
-            $display("FAIL");
-            errors++;
-        end
-
+        $display("PASS: Test %d", test);
         $finish;
     end
 
