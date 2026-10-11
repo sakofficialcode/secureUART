@@ -1,42 +1,41 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
-module lfsr_tb();
+module lfsr_tb ();
 
-    reg clock;
-    reg rst_n;
-    reg clr;
-    reg load_en;
-    reg load_bit;
-    reg step;
-    reg out;
+    reg       clock;
+    reg       rst_n;
+    reg       clr;
+    reg       load_en;
+    reg       load_bit;
+    reg       step;
+    reg       out;
     reg [7:0] state;
 
 
     lfsr #(
-        .W(8),
+        .W   (8),
         .TAPS(8'hB8)
     ) BIST (
-        .clk(clock),
-        .rst_n(rst_n),
-        .clr(clr),
-        .load_en(load_en),
+        .clk     (clock),
+        .rst_n   (rst_n),
+        .clr     (clr),
+        .load_en (load_en),
         .load_bit(load_bit),
-        .step(step),
-        .out(out),
-        .state(state)
+        .step    (step),
+        .out     (out),
+        .state   (state)
     );
 
-    integer test = 0;
-    integer errors = 0;
-    integer iter;
-    logic [7:0] pattern;
+    integer       test = 0;
+    integer       errors = 0;
+    integer       iter;
+    logic   [7:0] pattern;
 
     initial clock = 0;
     always #5 clock = ~clock;
 
     initial begin
-        #10000000
-        $display("TIMEOUT");
+        #10000000 $display("TIMEOUT");
         $finish;
     end
 
@@ -45,11 +44,11 @@ module lfsr_tb();
         $dumpvars(0, lfsr_tb);
 
         test++;
-        rst_n = 0;
-        clr = 0;
-        load_en = 0;
+        rst_n    = 0;
+        clr      = 0;
+        load_en  = 0;
         load_bit = 0;
-        step = 0;
+        step     = 0;
 
         @(negedge clock);
         @(negedge clock);
@@ -66,11 +65,11 @@ module lfsr_tb();
         test++;
 
 
-        load_en = 0;
+        load_en  = 0;
         load_bit = 0;
 
-        step = 1;
-        iter = 0;
+        step     = 1;
+        iter     = 0;
         do begin
             @(negedge clock);
             iter++;
@@ -91,11 +90,11 @@ module lfsr_tb();
         test++;
 
         load_en = 1;
-        step = 0;
+        step    = 0;
 
         pattern = 8'h6F;
 
-        for (int i =  7; i >= 0; i--) begin
+        for (int i = 7; i >= 0; i--) begin
             load_bit = pattern[i];
             @(negedge clock);
         end
