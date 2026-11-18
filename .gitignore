@@ -1,2 +1,7 @@
 build/*
 syn/work/
+*.cdslck
+CDS.log*
+.cadence/
+panic*
+libManager.log
