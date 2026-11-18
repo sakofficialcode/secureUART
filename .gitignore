@@ -5,3 +5,4 @@ CDS.log*
 .cadence/
 panic*
 libManager.log
+*.cdslck*
