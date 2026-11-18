@@ -42,10 +42,10 @@ create_clock -name clk -period 543 [get_ports clk]
 set_input_delay  50 -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
 set_output_delay 50 -clock clk [all_outputs]
 
-# Hand-routed clock = no CTS, so skew is unknown. Budget 0.5 ns of hold margin
-# and let DC insert delay cells (mostly on scan-chain Q->SI hops). Setup has
-# hundreds of ns of slack, so this costs nothing but a few cells.
-set_clock_uncertainty -hold 0.5 [get_clocks clk]
+# Hand-routed clock = no CTS. The block is ~100 um across, so wire skew is
+# tens of ps; 0.1 ns of hold margin covers it. (0.5 ns added ~520 delay cells
+# -- half the design -- because every flop-to-flop shift path needed padding.)
+set_clock_uncertainty -hold 0.1 [get_clocks clk]
 set_fix_hold [get_clocks clk]
 
 # No assign statements / literal constants in the netlist (clean Virtuoso import)
