@@ -209,24 +209,37 @@ module top_tb ();
     end
 
     // Keystream bit must always be ready when TX/RX consumes it
+    // Not checked while scan-locked: in the netlist, scan_en really shifts the chain,
+    // so TX/RX FSMs can land mid-frame and consume from the wiped cipher until reset.
+    // That is expected (spec: reset + re-key after scan); RTL has no chain to shift.
+    wire scan_locked_a = chip_a.scan_en || chip_a.sec.scan_force_rst_q;
+    wire scan_locked_b = chip_b.scan_en || chip_b.sec.scan_force_rst_q;
     always @(posedge clk_a) begin
-        if (chip_a.tx_ks_consume && chip_a.tx_cipher.ks_ready !== 1) begin
-            $error("chip_a TX consumed keystream before it was ready");
+        if (!scan_locked_a && chip_a.tx_ks_consume && chip_a.tx_cipher.ks_ready !== 1) begin
+            $error("chip_a TX consumed keystream before it was ready (ks_ready=%b keyed=%b sec_clr=%b rst_n=%b uart_rxd=%b rxd_s=%b tx_ks_consume=%b)",
+                   chip_a.tx_cipher.ks_ready, chip_a.tx_cipher.keyed, chip_a.sec_clr,
+                   chip_a.rst_n, chip_a.uart_rxd, chip_a.rxd_s, chip_a.tx_ks_consume);
             errors++;
         end
-        if (chip_a.rx_ks_consume && chip_a.rx_cipher.ks_ready !== 1) begin
-            $error("chip_a RX consumed keystream before it was ready");
+        if (!scan_locked_a && chip_a.rx_ks_consume && chip_a.rx_cipher.ks_ready !== 1) begin
+            $error("chip_a RX consumed keystream before it was ready (ks_ready=%b keyed=%b sec_clr=%b rst_n=%b uart_rxd=%b rxd_s=%b tx_ks_consume=%b)",
+                   chip_a.rx_cipher.ks_ready, chip_a.rx_cipher.keyed, chip_a.sec_clr,
+                   chip_a.rst_n, chip_a.uart_rxd, chip_a.rxd_s, chip_a.tx_ks_consume);
             errors++;
         end
     end
 
     always @(posedge clk_b) begin
-        if (chip_b.tx_ks_consume && chip_b.tx_cipher.ks_ready !== 1) begin
-            $error("chip_b TX consumed keystream before it was ready");
+        if (!scan_locked_b && chip_b.tx_ks_consume && chip_b.tx_cipher.ks_ready !== 1) begin
+            $error("chip_b TX consumed keystream before it was ready (ks_ready=%b keyed=%b sec_clr=%b rst_n=%b uart_rxd=%b rxd_s=%b tx_ks_consume=%b)",
+                   chip_b.tx_cipher.ks_ready, chip_b.tx_cipher.keyed, chip_b.sec_clr,
+                   chip_b.rst_n, chip_b.uart_rxd, chip_b.rxd_s, chip_b.tx_ks_consume);
             errors++;
         end
-        if (chip_b.rx_ks_consume && chip_b.rx_cipher.ks_ready !== 1) begin
-            $error("chip_b RX consumed keystream before it was ready");
+        if (!scan_locked_b && chip_b.rx_ks_consume && chip_b.rx_cipher.ks_ready !== 1) begin
+            $error("chip_b RX consumed keystream before it was ready (ks_ready=%b keyed=%b sec_clr=%b rst_n=%b uart_rxd=%b rxd_s=%b tx_ks_consume=%b)",
+                   chip_b.rx_cipher.ks_ready, chip_b.rx_cipher.keyed, chip_b.sec_clr,
+                   chip_b.rst_n, chip_b.uart_rxd, chip_b.rxd_s, chip_b.tx_ks_consume);
             errors++;
         end
     end
