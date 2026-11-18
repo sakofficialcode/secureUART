@@ -40,6 +40,11 @@ module top_tb ();
         .bist_start(bist_start[0]),
         .bist_done (bist_done[0]),
         .bist_pass (bist_pass[0])
+`ifdef GLS
+        ,
+        .scan_in   (1'b0),
+        .scan_out  ()
+`endif
     );
 
     top chip_b (
@@ -60,6 +65,11 @@ module top_tb ();
         .bist_start(bist_start[1]),
         .bist_done (bist_done[1]),
         .bist_pass (bist_pass[1])
+`ifdef GLS
+        ,
+        .scan_in   (1'b0),
+        .scan_out  ()
+`endif
     );
 
     // 1.8432 MHz ~= 542.5 ns; chip_b ~1% slower
