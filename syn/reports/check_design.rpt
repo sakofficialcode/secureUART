@@ -1,0 +1,36 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7-1
+Date:        Wed Nov 18 00:46:56 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Feedthrough (LINT-29)                                           1
+    Shorted outputs (LINT-31)                                       3
+
+Cells                                                               9
+    Cells do not drive (LINT-1)                                     6
+    Connected to power or ground (LINT-32)                          2
+    Nets connected to multiple pins on same cell (LINT-33)          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'baud_gen', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'uart_tx', cell 'C244' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx', cell 'C288' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'bist_ctrl_51_51', cell 'C456' does not drive any nets. (LINT-1)
+Warning: In design 'sec_ctrl', input port 'key_in' is connected directly to output port 'key_bit'. (LINT-29)
+Warning: In design 'lfsr_17_12000_1c94b', output port 'out' is connected directly to output port 'state[16]'. (LINT-31)
+Warning: In design 'lfsr_15_6000_70ae', output port 'out' is connected directly to output port 'state[14]'. (LINT-31)
+Warning: In design 'lfsr_8_b8_a3', output port 'out' is connected directly to output port 'state[7]'. (LINT-31)
+Warning: In design 'bist_ctrl_51_51', a pin on submodule 'p_gen' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load_en' is connected to logic 0. 
+Warning: In design 'bist_ctrl_51_51', a pin on submodule 'p_gen' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load_bit' is connected to logic 0. 
+Warning: In design 'bist_ctrl_51_51', the same net is connected to more than one pin on submodule 'p_gen'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load_en', 'load_bit''.
+1

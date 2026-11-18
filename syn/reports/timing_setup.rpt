@@ -1,0 +1,230 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : top
+Version: U-2022.12-SP7-1
+Date   : Wed Nov 18 00:47:19 2026
+****************************************
+
+Operating Conditions: tt_typical_max_1p00v_25c   Library: sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+Wire Load Model Mode: top
+
+  Startpoint: key_sel (input port clocked by clk)
+  Endpoint: rx_cipher/S/state_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   50.00      50.00 r
+  key_sel (in)                                            0.00      50.00 r
+  sec/key_sel (sec_ctrl)                                  0.00      50.00 r
+  sec/U4/Y (AND2_X0P5M_A12TR)                             0.14      50.14 r
+  sec/rx_key_load (sec_ctrl)                              0.00      50.14 r
+  rx_cipher/key_load (sg_cipher_0)                        0.00      50.14 r
+  rx_cipher/U3/Y (INV_X0P5B_A12TR)                        0.07      50.21 f
+  rx_cipher/U4/Y (OAI21_X0P5M_A12TR)                      0.09      50.30 r
+  rx_cipher/U5/Y (NOR2_X1M_A12TR)                         0.09      50.39 f
+  rx_cipher/S/step (lfsr_15_6000_70ae_0)                  0.00      50.39 f
+  rx_cipher/S/U11/Y (NOR2_X0P5M_A12TR)                    0.10      50.50 r
+  rx_cipher/S/U12/Y (NAND2_X0P5M_A12TR)                   0.06      50.56 f
+  rx_cipher/S/U15/Y (INV_X0P7B_A12TR)                     0.15      50.70 r
+  rx_cipher/S/U22/Y (AOI22_X0P5M_A12TR)                   0.07      50.78 f
+  rx_cipher/S/state_reg[1]/B (A2DFFQN_X0P5M_A12TR)        0.00      50.78 f
+  data arrival time                                                 50.78
+
+  clock clk (rise edge)                                 543.00     543.00
+  clock network delay (ideal)                             0.00     543.00
+  rx_cipher/S/state_reg[1]/CK (A2DFFQN_X0P5M_A12TR)       0.00     543.00 r
+  library setup time                                     -0.05     542.95
+  data required time                                               542.95
+  --------------------------------------------------------------------------
+  data required time                                               542.95
+  data arrival time                                                -50.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      492.17
+
+
+  Startpoint: key_sel (input port clocked by clk)
+  Endpoint: rx_cipher/S/state_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   50.00      50.00 r
+  key_sel (in)                                            0.00      50.00 r
+  sec/key_sel (sec_ctrl)                                  0.00      50.00 r
+  sec/U4/Y (AND2_X0P5M_A12TR)                             0.14      50.14 r
+  sec/rx_key_load (sec_ctrl)                              0.00      50.14 r
+  rx_cipher/key_load (sg_cipher_0)                        0.00      50.14 r
+  rx_cipher/U3/Y (INV_X0P5B_A12TR)                        0.07      50.21 f
+  rx_cipher/U4/Y (OAI21_X0P5M_A12TR)                      0.09      50.30 r
+  rx_cipher/U5/Y (NOR2_X1M_A12TR)                         0.09      50.39 f
+  rx_cipher/S/step (lfsr_15_6000_70ae_0)                  0.00      50.39 f
+  rx_cipher/S/U11/Y (NOR2_X0P5M_A12TR)                    0.10      50.50 r
+  rx_cipher/S/U12/Y (NAND2_X0P5M_A12TR)                   0.06      50.56 f
+  rx_cipher/S/U15/Y (INV_X0P7B_A12TR)                     0.15      50.70 r
+  rx_cipher/S/U17/Y (AOI22_X0P5M_A12TR)                   0.07      50.78 f
+  rx_cipher/S/state_reg[2]/B (A2DFFQN_X0P5M_A12TR)        0.00      50.78 f
+  data arrival time                                                 50.78
+
+  clock clk (rise edge)                                 543.00     543.00
+  clock network delay (ideal)                             0.00     543.00
+  rx_cipher/S/state_reg[2]/CK (A2DFFQN_X0P5M_A12TR)       0.00     543.00 r
+  library setup time                                     -0.05     542.95
+  data required time                                               542.95
+  --------------------------------------------------------------------------
+  data required time                                               542.95
+  data arrival time                                                -50.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      492.17
+
+
+  Startpoint: key_sel (input port clocked by clk)
+  Endpoint: rx_cipher/S/state_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   50.00      50.00 r
+  key_sel (in)                                            0.00      50.00 r
+  sec/key_sel (sec_ctrl)                                  0.00      50.00 r
+  sec/U4/Y (AND2_X0P5M_A12TR)                             0.14      50.14 r
+  sec/rx_key_load (sec_ctrl)                              0.00      50.14 r
+  rx_cipher/key_load (sg_cipher_0)                        0.00      50.14 r
+  rx_cipher/U3/Y (INV_X0P5B_A12TR)                        0.07      50.21 f
+  rx_cipher/U4/Y (OAI21_X0P5M_A12TR)                      0.09      50.30 r
+  rx_cipher/U5/Y (NOR2_X1M_A12TR)                         0.09      50.39 f
+  rx_cipher/S/step (lfsr_15_6000_70ae_0)                  0.00      50.39 f
+  rx_cipher/S/U11/Y (NOR2_X0P5M_A12TR)                    0.10      50.50 r
+  rx_cipher/S/U12/Y (NAND2_X0P5M_A12TR)                   0.06      50.56 f
+  rx_cipher/S/U15/Y (INV_X0P7B_A12TR)                     0.15      50.70 r
+  rx_cipher/S/U24/Y (AOI22_X0P5M_A12TR)                   0.07      50.78 f
+  rx_cipher/S/state_reg[3]/B (A2DFFQN_X0P5M_A12TR)        0.00      50.78 f
+  data arrival time                                                 50.78
+
+  clock clk (rise edge)                                 543.00     543.00
+  clock network delay (ideal)                             0.00     543.00
+  rx_cipher/S/state_reg[3]/CK (A2DFFQN_X0P5M_A12TR)       0.00     543.00 r
+  library setup time                                     -0.05     542.95
+  data required time                                               542.95
+  --------------------------------------------------------------------------
+  data required time                                               542.95
+  data arrival time                                                -50.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      492.17
+
+
+  Startpoint: key_sel (input port clocked by clk)
+  Endpoint: rx_cipher/S/state_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   50.00      50.00 r
+  key_sel (in)                                            0.00      50.00 r
+  sec/key_sel (sec_ctrl)                                  0.00      50.00 r
+  sec/U4/Y (AND2_X0P5M_A12TR)                             0.14      50.14 r
+  sec/rx_key_load (sec_ctrl)                              0.00      50.14 r
+  rx_cipher/key_load (sg_cipher_0)                        0.00      50.14 r
+  rx_cipher/U3/Y (INV_X0P5B_A12TR)                        0.07      50.21 f
+  rx_cipher/U4/Y (OAI21_X0P5M_A12TR)                      0.09      50.30 r
+  rx_cipher/U5/Y (NOR2_X1M_A12TR)                         0.09      50.39 f
+  rx_cipher/S/step (lfsr_15_6000_70ae_0)                  0.00      50.39 f
+  rx_cipher/S/U11/Y (NOR2_X0P5M_A12TR)                    0.10      50.50 r
+  rx_cipher/S/U12/Y (NAND2_X0P5M_A12TR)                   0.06      50.56 f
+  rx_cipher/S/U15/Y (INV_X0P7B_A12TR)                     0.15      50.70 r
+  rx_cipher/S/U19/Y (AOI22_X0P5M_A12TR)                   0.07      50.78 f
+  rx_cipher/S/state_reg[5]/B (A2DFFQN_X0P5M_A12TR)        0.00      50.78 f
+  data arrival time                                                 50.78
+
+  clock clk (rise edge)                                 543.00     543.00
+  clock network delay (ideal)                             0.00     543.00
+  rx_cipher/S/state_reg[5]/CK (A2DFFQN_X0P5M_A12TR)       0.00     543.00 r
+  library setup time                                     -0.05     542.95
+  data required time                                               542.95
+  --------------------------------------------------------------------------
+  data required time                                               542.95
+  data arrival time                                                -50.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      492.17
+
+
+  Startpoint: key_sel (input port clocked by clk)
+  Endpoint: rx_cipher/S/state_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   50.00      50.00 r
+  key_sel (in)                                            0.00      50.00 r
+  sec/key_sel (sec_ctrl)                                  0.00      50.00 r
+  sec/U4/Y (AND2_X0P5M_A12TR)                             0.14      50.14 r
+  sec/rx_key_load (sec_ctrl)                              0.00      50.14 r
+  rx_cipher/key_load (sg_cipher_0)                        0.00      50.14 r
+  rx_cipher/U3/Y (INV_X0P5B_A12TR)                        0.07      50.21 f
+  rx_cipher/U4/Y (OAI21_X0P5M_A12TR)                      0.09      50.30 r
+  rx_cipher/U5/Y (NOR2_X1M_A12TR)                         0.09      50.39 f
+  rx_cipher/S/step (lfsr_15_6000_70ae_0)                  0.00      50.39 f
+  rx_cipher/S/U11/Y (NOR2_X0P5M_A12TR)                    0.10      50.50 r
+  rx_cipher/S/U12/Y (NAND2_X0P5M_A12TR)                   0.06      50.56 f
+  rx_cipher/S/U15/Y (INV_X0P7B_A12TR)                     0.15      50.70 r
+  rx_cipher/S/U21/Y (AOI22_X0P5M_A12TR)                   0.07      50.78 f
+  rx_cipher/S/state_reg[7]/B (A2DFFQN_X0P5M_A12TR)        0.00      50.78 f
+  data arrival time                                                 50.78
+
+  clock clk (rise edge)                                 543.00     543.00
+  clock network delay (ideal)                             0.00     543.00
+  rx_cipher/S/state_reg[7]/CK (A2DFFQN_X0P5M_A12TR)       0.00     543.00 r
+  library setup time                                     -0.05     542.95
+  data required time                                               542.95
+  --------------------------------------------------------------------------
+  data required time                                               542.95
+  data arrival time                                                -50.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      492.17
+
+
+1

@@ -1,0 +1,182 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 5
+Design : top
+Version: U-2022.12-SP7-1
+Date   : Wed Nov 18 00:47:19 2026
+****************************************
+
+Operating Conditions: tt_typical_max_1p00v_25c   Library: sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+Wire Load Model Mode: top
+
+  Startpoint: rx/phase_cnt_q_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rx/phase_cnt_q_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  rx/phase_cnt_q_reg[2]/CK (SDFFQ_X1M_A12TR)              0.00       0.00 r
+  rx/phase_cnt_q_reg[2]/Q (SDFFQ_X1M_A12TR)               0.08       0.08 f
+  rx/phase_cnt_q_reg[3]/SI (SDFFQ_X1M_A12TR)              0.00       0.08 f
+  data arrival time                                                  0.08
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  rx/phase_cnt_q_reg[3]/CK (SDFFQ_X1M_A12TR)              0.00       0.10 r
+  library hold time                                      -0.04       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: baud/counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bist/MISR_q_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  baud/counter_reg[3]/CK (SDFFQ_X1M_A12TR)                0.00       0.00 r
+  baud/counter_reg[3]/Q (SDFFQ_X1M_A12TR)                 0.08       0.08 f
+  baud/test_so (baud_gen_test_1)                          0.00       0.08 f
+  bist/test_si (bist_ctrl_51_51_test_1)                   0.00       0.08 f
+  bist/MISR_q_reg[0]/SI (SDFFQ_X1M_A12TR)                 0.00       0.08 f
+  data arrival time                                                  0.08
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  bist/MISR_q_reg[0]/CK (SDFFQ_X1M_A12TR)                 0.00       0.10 r
+  library hold time                                      -0.04       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: tx/data_reg_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tx/data_reg_q_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tx/data_reg_q_reg[5]/CK (SDFFQ_X1M_A12TR)               0.00       0.00 r
+  tx/data_reg_q_reg[5]/Q (SDFFQ_X1M_A12TR)                0.09       0.09 f
+  tx/data_reg_q_reg[6]/SI (SDFFQ_X1M_A12TR)               0.00       0.09 f
+  data arrival time                                                  0.09
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  tx/data_reg_q_reg[6]/CK (SDFFQ_X1M_A12TR)               0.00       0.10 r
+  library hold time                                      -0.05       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: tx/data_reg_q_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tx/data_reg_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tx/data_reg_q_reg[4]/CK (SDFFQ_X1M_A12TR)               0.00       0.00 r
+  tx/data_reg_q_reg[4]/Q (SDFFQ_X1M_A12TR)                0.09       0.09 f
+  tx/data_reg_q_reg[5]/SI (SDFFQ_X1M_A12TR)               0.00       0.09 f
+  data arrival time                                                  0.09
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  tx/data_reg_q_reg[5]/CK (SDFFQ_X1M_A12TR)               0.00       0.10 r
+  library hold time                                      -0.05       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: tx/data_reg_q_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tx/data_reg_q_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                Small                 sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tx/data_reg_q_reg[3]/CK (SDFFQ_X1M_A12TR)               0.00       0.00 r
+  tx/data_reg_q_reg[3]/Q (SDFFQ_X1M_A12TR)                0.09       0.09 f
+  tx/data_reg_q_reg[4]/SI (SDFFQ_X1M_A12TR)               0.00       0.09 f
+  data arrival time                                                  0.09
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  tx/data_reg_q_reg[4]/CK (SDFFQ_X1M_A12TR)               0.00       0.10 r
+  library hold time                                      -0.05       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+1

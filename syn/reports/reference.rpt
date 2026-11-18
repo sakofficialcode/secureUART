@@ -1,0 +1,494 @@
+ 
+****************************************
+Report : reference
+Design : top
+Version: U-2022.12-SP7-1
+Date   : Wed Nov 18 00:47:19 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       3      8.640000  
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000      10     43.200002  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+INV_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       1      1.440000  
+NAND2B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OR2_X0P5M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+baud_gen_test_1                  74.399999       1     74.399999  h, n
+bist_ctrl_51_51_test_1          602.399991       1    602.399991  h, n
+sec_ctrl                         24.480000       1     24.480000  h, n
+sg_cipher_0                     568.320007       1    568.320007  h, n
+sg_cipher_1                     567.360006       1    567.360006  h, n
+sync_2ff_test_1                  29.759999       1     29.759999  h, n
+uart_rx_test_1                  368.159994       1    368.159994  h, n
+uart_tx_test_1                  318.719993       1    318.719993  h, n
+-----------------------------------------------------------------------------
+Total 14 references                                  2614.559991
+
+****************************************
+Design: baud_gen_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       3      4.320000  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NAND3_X0P5A_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.400000       1      2.400000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       2      3.840000  
+OA211_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       2      8.640000  
+SDFFQ_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       4     49.919998  n
+-----------------------------------------------------------------------------
+Total 7 references                                     74.399999
+
+****************************************
+Design: bist_ctrl_51_51_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       2      5.760000  
+AOI21_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       3     10.080000  
+AOI31_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AOI32_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       2      7.680000  
+AOI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000      20     28.800001  
+INV_X0P5M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       1      1.440000  
+INV_X0P6M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       1      1.440000  
+NAND2B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       2      5.760000  
+NAND2_X0P5A_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       7     13.440000  
+NAND2_X1A_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NAND3B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+NAND3_X0P5A_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.400000       4      9.600000  
+NAND4B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+NAND4_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+NOR2B_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       6     11.520000  
+NOR3_X0P5A_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       2      5.760000  
+NOR3_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       2      5.760000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       9     30.239999  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       4     13.440000  
+OAI222_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.800000       1      4.800000  
+OR2_X0P5M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OR3_X0P5M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+SDFFQ_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       4     49.919998  n
+SDFFQ_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000      12    149.759995  n
+TIELO_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+XNOR2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000      10     43.200002  
+lfsr_8_b8_a3_test_1             166.079997       1    166.079997  h, n
+-----------------------------------------------------------------------------
+Total 32 references                                   602.399991
+
+****************************************
+Design: lfsr_8_b8_a3_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       2      6.720000  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000      11     15.840001  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       3      5.760000  
+NOR2XB_X0P7M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       4     13.440000  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       2      6.720000  
+OAI221_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       3     12.960001  
+SDFFQ_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       3     37.439999  n
+SDFFQ_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       5     62.399998  n
+-----------------------------------------------------------------------------
+Total 10 references                                   166.079997
+
+****************************************
+Design: sec_ctrl 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       1     10.080000  n
+NOR2XB_X1M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OA21_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OR3_X0P5M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+-----------------------------------------------------------------------------
+Total 6 references                                     24.480000
+
+****************************************
+Design: sg_cipher_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+AOI31_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AOI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       3     30.240000  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       4      5.760000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       2      3.840000  
+NOR2_X1M_A12TR     sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+OA21_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+lfsr_15_6000_70ae_0             238.560003       1    238.560003  h, n
+lfsr_17_12000_1c94b_0           267.360004       1    267.360004  h, n
+-----------------------------------------------------------------------------
+Total 12 references                                   568.320007
+
+****************************************
+Design: lfsr_15_6000_70ae_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+A2DFFQN_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.560000       8     84.480003  n
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       6     25.920001  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       9     30.239999  
+AOI32_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       7     70.559999  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       5      7.200000  
+INV_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       1      1.440000  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2XB_X1M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2_X1P4M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+-----------------------------------------------------------------------------
+Total 13 references                                   238.560003
+
+****************************************
+Design: lfsr_17_12000_1c94b_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+A2DFFQN_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.560000       8     84.480003  n
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       8     34.560001  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       9     30.239999  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       9     90.719999  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       3      4.320000  
+NAND2B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2_X2M_A12TR     sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR3_X3M_A12TR     sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  5.760000       1      5.760000  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI221_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+-----------------------------------------------------------------------------
+Total 12 references                                   267.360004
+
+****************************************
+Design: sg_cipher_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+AOI31_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AOI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       3     30.240000  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       4      5.760000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       2      3.840000  
+NOR2_X0P7M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+OA21_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+lfsr_15_6000_70ae_1             238.560003       1    238.560003  h, n
+lfsr_17_12000_1c94b_1           266.400004       1    266.400004  h, n
+-----------------------------------------------------------------------------
+Total 12 references                                   567.360006
+
+****************************************
+Design: lfsr_15_6000_70ae_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+A2DFFQN_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.560000       8     84.480003  n
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       6     25.920001  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       9     30.239999  
+AOI32_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       7     70.559999  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       5      7.200000  
+INV_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       1      1.440000  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2XB_X1M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2_X1P4M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+-----------------------------------------------------------------------------
+Total 13 references                                   238.560003
+
+****************************************
+Design: lfsr_17_12000_1c94b_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+A2DFFQN_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.560000       8     84.480003  n
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       8     34.560001  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       9     30.239999  
+BUF_X0P7B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+BUF_X0P8B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+DFFQ_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 10.080000       9     90.719999  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       3      4.320000  
+NAND2B_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2_X2M_A12TR     sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR3_X0P5A_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI221_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+-----------------------------------------------------------------------------
+Total 13 references                                   266.400004
+
+****************************************
+Design: sync_2ff_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+A2SDFFQ_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 13.440000       2     26.879999  n
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000       2      2.880000  
+-----------------------------------------------------------------------------
+Total 2 references                                     29.759999
+
+****************************************
+Design: uart_rx_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       8     34.560001  
+AOI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       4     11.520000  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       2      6.720000  
+AOI31_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AOI32_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+AOI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000      13     18.720001  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       8     15.360000  
+NAND3_X0P5A_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.400000       3      7.200000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       7     13.440000  
+NOR2_X0P7M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+NOR2_X1M_A12TR     sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       1      1.920000  
+OA211_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+OAI2XB1_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       4     11.520000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       2      6.720000  
+OAI222_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.800000       1      4.800000  
+SDFFQ_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       2     24.959999  n
+SDFFQ_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000      15    187.199993  n
+-----------------------------------------------------------------------------
+Total 20 references                                   368.159994
+
+****************************************
+Design: uart_tx_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+AOI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       3      8.640000  
+AOI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       8     26.879999  
+AOI31_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+AOI32_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+INV_X0P5B_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.440000      11     15.840001  
+NAND2_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       5      9.600000  
+NAND3_X0P5A_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.400000       3      7.200000  
+NOR2_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  1.920000       2      3.840000  
+NOR2_X1P4M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR3_X0P5A_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+NOR3_X1P4A_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.840000       1      3.840000  
+OA21_X0P5M_A12TR   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       1      3.360000  
+OAI2XB1_X0P5M_A12TR
+                   sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       7     23.519999  
+OAI21_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  2.880000       1      2.880000  
+OAI22_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       2      6.720000  
+OAI211_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  3.360000       3     10.080000  
+OAI221_X0P5M_A12TR sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                  4.320000       1      4.320000  
+SDFFQ_X0P5M_A12TR  sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000       2     24.959999  n
+SDFFQ_X1M_A12TR    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c
+                                 12.480000      12    149.759995  n
+-----------------------------------------------------------------------------
+Total 20 references                                   318.719993
+1

@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: U-2022.12-SP7-1
+Date   : Wed Nov 18 00:47:19 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c (File: /opt/PDK/TSMC65/ARM/cln65gplus/sc12_base_rvt/r3p0-00eac0/db/sc12_cln65gplus_base_rvt_tt_typical_max_1p00v_25c.db)
+
+Number of ports:                          253
+Number of nets:                           700
+Number of cells:                          545
+Number of combinational cells:            400
+Number of sequential cells:               132
+Number of macros/black boxes:               0
+Number of buf/inv:                         97
+Number of references:                      14
+
+Combinational area:               1120.320009
+Buf/Inv area:                      143.520005
+Noncombinational area:            1494.239983
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  2614.559991
+Total area:                       2614.559991
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ----------------------
+top                               2614.5600    100.0    60.9600     0.0000  0.0000  top
+baud                                74.4000      2.8    24.4800    49.9200  0.0000  baud_gen_test_1
+bist                               602.4000     23.0   236.6400   199.6800  0.0000  bist_ctrl_51_51_test_1
+bist/p_gen                         166.0800      6.4    66.2400    99.8400  0.0000  lfsr_8_b8_a3_test_1
+rx                                 368.1600     14.1   156.0000   212.1600  0.0000  uart_rx_test_1
+rx_cipher                          568.3200     21.7    32.1600    30.2400  0.0000  sg_cipher_0
+rx_cipher/A                        267.3600     10.2    92.1600   175.2000  0.0000  lfsr_17_12000_1c94b_0
+rx_cipher/S                        238.5600      9.1    83.5200   155.0400  0.0000  lfsr_15_6000_70ae_0
+sec                                 24.4800      0.9    14.4000    10.0800  0.0000  sec_ctrl
+sync                                29.7600      1.1     2.8800    26.8800  0.0000  sync_2ff_test_1
+tx                                 318.7200     12.2   144.0000   174.7200  0.0000  uart_tx_test_1
+tx_cipher                          567.3600     21.7    32.1600    30.2400  0.0000  sg_cipher_1
+tx_cipher/A                        266.4000     10.2    91.2000   175.2000  0.0000  lfsr_17_12000_1c94b_1
+tx_cipher/S                        238.5600      9.1    83.5200   155.0400  0.0000  lfsr_15_6000_70ae_1
+--------------------------------  ---------  -------  ---------  ---------  ------  ----------------------
+Total                                                 1120.3200  1494.2400  0.0000
+
+1

@@ -1,0 +1,87 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Scan chain violations...
+
+ Warning: Nonscan DFF sec/scan_force_rst_q_reg disturbed during time 45 of shift procedure. (S19-1)
+Information: There are 69 other cells with the same violation. (TEST-171)
+
+Scan chain violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 70
+
+-----------------------------------------------------------------
+
+70 SCAN CHAIN VIOLATIONS
+    70 Nonscan cell disturb violations (S19)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 132 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  71 cells are valid non-scan cells
+      *  61 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 4108 faults were added to fault list.
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=2060, abort_limit=10...
+ 0            1743    314         1/0/0    53.43%      0.00
+ 0             166    127         8/1/0    57.72%      0.00
+ 0              68     25        27/1/0    59.89%      0.00
+ 0              25      0        27/1/0    60.50%      0.00
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       2448
+ Possibly detected                PT          0
+ Undetectable                     UD         62
+ ATPG untestable                  AU       1598
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              4108
+ test coverage                            60.50%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

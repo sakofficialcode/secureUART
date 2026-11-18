@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : Scan path
+Design : top
+Version: U-2022.12-SP7-1
+Date   : Wed Nov 18 00:47:19 2026
+****************************************
+
+========================================
+TEST MODE: Internal_scan
+VIEW     : Existing DFT
+========================================
+
+========================================
+AS SPECIFIED BY USER
+========================================
+
+
+========================================
+AS BUILT BY insert_dft
+========================================
+
+Scan_path     Cell_#    Instance_name            Clocks
+---------     ------    -------------            ------
+I chain0      0         baud/counter_reg[0]      clk 
+              1         baud/counter_reg[1]
+              2         baud/counter_reg[2]
+              3         baud/counter_reg[3]
+              4         bist/MISR_q_reg[0]
+              5         bist/MISR_q_reg[1]
+              6         bist/MISR_q_reg[2]
+              7         bist/MISR_q_reg[3]
+              8         bist/MISR_q_reg[4]
+              9         bist/MISR_q_reg[5]
+              10        bist/MISR_q_reg[6]
+              11        bist/MISR_q_reg[7]
+              12        bist/fail_q_reg
+              13        bist/p_gen/state_reg[0]
+              14        bist/p_gen/state_reg[1]
+              15        bist/p_gen/state_reg[2]
+              16        bist/p_gen/state_reg[3]
+              17        bist/p_gen/state_reg[4]
+              18        bist/p_gen/state_reg[5]
+              19        bist/p_gen/state_reg[6]
+              20        bist/p_gen/state_reg[7]
+              21        bist/state_q_reg[0]
+              22        bist/state_q_reg[1]
+              23        bist/state_q_reg[2]
+              24        bist/timeout_q_reg[0]
+              25        bist/timeout_q_reg[1]
+              26        bist/timeout_q_reg[2]
+              27        bist/timeout_q_reg[3]
+              28        rx/bit_cnt_q_reg[0]
+              29        rx/bit_cnt_q_reg[1]
+              30        rx/bit_cnt_q_reg[2]
+              31        rx/data_reg_q_reg[0]
+              32        rx/data_reg_q_reg[1]
+              33        rx/data_reg_q_reg[2]
+              34        rx/data_reg_q_reg[3]
+              35        rx/data_reg_q_reg[4]
+              36        rx/data_reg_q_reg[5]
+              37        rx/data_reg_q_reg[6]
+              38        rx/phase_cnt_q_reg[0]
+              39        rx/phase_cnt_q_reg[1]
+              40        rx/phase_cnt_q_reg[2]
+              41        rx/phase_cnt_q_reg[3]
+              42        rx/state_q_reg[0]
+              43        rx/state_q_reg[1]
+              44        sync/q1_reg
+              45        sync/q2_reg
+              46        tx/bit_cnt_q_reg[0]
+              47        tx/bit_cnt_q_reg[1]
+              48        tx/bit_cnt_q_reg[2]
+              49        tx/data_reg_q_reg[0]
+              50        tx/data_reg_q_reg[1]
+              51        tx/data_reg_q_reg[2]
+              52        tx/data_reg_q_reg[3]
+              53        tx/data_reg_q_reg[4]
+              54        tx/data_reg_q_reg[5]
+              55        tx/data_reg_q_reg[6]
+              56        tx/data_reg_q_reg[7]
+              57        tx/state_q_reg[0]
+              58        tx/state_q_reg[1]
+              59        tx/txd_q_reg
+              60        rx/data_reg_q_reg[7]
+
+1
