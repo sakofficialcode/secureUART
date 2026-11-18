@@ -363,7 +363,13 @@ module top_tb ();
         ticks(1, 40);
         check(n_rx_b == base_rx && n_err_b == base_err, "glitch produced a byte or an error");
         check(cons_b == base_cons, "glitch consumed keystream");
+`ifdef GLS
+        // Netlist: state_q[0] -> net state_q_0_, state_q[1] -> renamed test_so1 by DFT
+        check({chip_b.rx.test_so1, chip_b.rx.state_q_0_} === 2'b00,
+              "RX did not return to IDLE after glitch");
+`else
         check(chip_b.rx.state_q === 2'b00, "RX did not return to IDLE after glitch");
+`endif
         send(0, 8'h3C);
         ticks(0, 200);
         check(n_rx_b == base_rx + 1 && got_b[base_rx] === 8'h3C, "link out of sync after glitch");
