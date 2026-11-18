@@ -84,6 +84,10 @@ dft_drc -coverage_estimate      > $RPT_DIR/dft_drc_post.rpt
 set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
 compile_ultra -scan -incremental -no_autoungroup -no_boundary_optimization
 
+# Dedicated hold-fix pass: compile_ultra treats hold as low priority and left
+# violations on the LFSR shift paths. This only adds delay cells.
+compile -incremental_mapping -only_hold_time
+
 # ---------------------------------------------------------------- reports
 report_area      -hierarchy                   > $RPT_DIR/area.rpt
 report_reference -hierarchy                   > $RPT_DIR/reference.rpt
