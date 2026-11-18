@@ -16,7 +16,7 @@ set_app_var link_library   "* $LIB_DB"
 
 # Tie cells are dont_use by default; allow them so constants become TIEHI/TIELO
 # cells instead of 1'b0/1'b1 literals (which Virtuoso import can't place).
-set_dont_use [get_lib_cells */TIE*] false
+remove_attribute [get_lib_cells */TIE*] dont_use
 
 # ---------------------------------------------------------------- read RTL
 set RTL_FILES {
@@ -41,6 +41,12 @@ check_design > $RPT_DIR/check_design.rpt
 create_clock -name clk -period 543 [get_ports clk]
 set_input_delay  50 -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
 set_output_delay 50 -clock clk [all_outputs]
+
+# Hand-routed clock = no CTS, so skew is unknown. Budget 0.5 ns of hold margin
+# and let DC insert delay cells (mostly on scan-chain Q->SI hops). Setup has
+# hundreds of ns of slack, so this costs nothing but a few cells.
+set_clock_uncertainty -hold 0.5 [get_clocks clk]
+set_fix_hold [get_clocks clk]
 
 # No assign statements / literal constants in the netlist (clean Virtuoso import)
 set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
